@@ -1,0 +1,1 @@
+# Master Architecture Kit - Integrated Modular Application
