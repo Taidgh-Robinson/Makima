@@ -8,7 +8,7 @@ import { SampleData } from '../Sample/Sample.types'
 export function Sample() {
     const [SampleData, setSampleData] = useState<SampleData | null>(null);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchSampleData = async () => {
@@ -23,8 +23,9 @@ export function Sample() {
                 const data = await response.json();
                 setSampleData(data);
             } catch (err) {
-                setError(err.message);
-            } finally {
+                setError(err instanceof Error ? err.message : 'An error occurred');
+            }
+            finally {
                 setLoading(false);
             }
         };
