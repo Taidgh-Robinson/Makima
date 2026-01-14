@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, status
 from typing import List
-from backend.models.sample_model import SampleModel
+from models.sample_model import SampleModel
 from datetime import datetime
 
 router = APIRouter()

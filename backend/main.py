@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.routes.sample_routes import router as sample_routes
+from routes.sample_routes import router as sample_routes
 app = FastAPI()
 
 # Allow local node dev server (3000) and others
