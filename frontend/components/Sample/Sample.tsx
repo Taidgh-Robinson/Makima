@@ -14,7 +14,7 @@ export function Sample() {
         const fetchSampleData = async () => {
             try {
                 // Replace with your actual FastAPI endpoint URL
-                const response = await fetch('http://localhost:8000/sample/get_sample');
+                const response = await fetch('/api/sample/get_sample');
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch Sample data');

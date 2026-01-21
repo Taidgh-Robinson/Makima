@@ -19,6 +19,6 @@ app.add_middleware(
 
 app.include_router(sample_routes, prefix="/sample", tags=["users"])
 
-@app.get("/api/hello")
+@app.get("/hello")
 def hello():
     return {"message": "Hello from FastAPI!"}
